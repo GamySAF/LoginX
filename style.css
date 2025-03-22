@@ -1,0 +1,193 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .allinone {
+    perspective: 1000px;
+    width: 75%;
+    height: 80%;
+    max-width: 700px;
+    max-height: 350px;
+  }
+  
+  .page-container {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border: 1px solid rgb(225, 214, 214);
+    backface-visibility: hidden;
+  }
+  
+  .two {
+    transform: rotateY(180deg);
+  }
+  
+  .flip {
+    transform: rotateY(180deg);
+  }
+  
+  button {
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  .mainpart {
+    width: 50%;
+    height: 100%;
+    background-color: antiquewhite;
+  }
+  
+  .halfpart {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(40, 29, 51);
+    color: white;
+  }
+  
+  h1 {
+    padding: 40px 0 30px;
+  }
+  
+  input {
+    margin: 1px 0 9px;
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(169, 120, 120);
+    padding: 0 10px;
+  }
+  
+  .signin {
+    margin: 16px 0 10px;
+    background-color: rgb(146, 88, 88);
+    color: white;
+    width: 100px;
+    border-radius: 50px;
+    height: 39px;
+    font-size: 18px;
+    border: 2px solid rgb(193, 179, 179);
+  }
+  
+  .halfpart p {
+    font-size: 19px;
+    margin: 5px 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      display: block;
+      margin: 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    
+    .allinone {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      perspective: none;
+    }
+    
+    .page-container {
+      width: 100%;
+      height: auto;
+    }
+    
+    .page {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border: 1px solid #e1d6d6;
+      background-color: aqua;
+      padding: 15px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .page.active {
+      display: block;
+    }
+    
+    .flip,
+    .two {
+      transform: none;
+    }
+    
+    .mainpart,
+    .halfpart {
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      height: auto;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 15px;
+      padding: 10px 0;
+    }
+    
+    input {
+      width: 90%;
+      max-width: 300px;
+      height: 40px;
+      margin: 10px auto;
+      border: 1.5px solid rgb(169, 120, 120);
+      border-radius: 10px;
+      padding: 0 10px;
+      display: block;
+    }
+    
+    button.signin {
+      width: 90%;
+      max-width: 300px;
+      height: 45px;
+      margin: 16px auto;
+      background-color: rgb(146, 88, 88);
+      color: white;
+      border: 2px solid rgb(193, 179, 179);
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      display: block;
+    }
+    
+    button.signin:hover {
+      background-color: blue;
+      color: white;
+    }
+    
+    .halfpart p {
+      font-size: 1rem;
+      margin: 10px 20px;
+    }
+  }
+  
